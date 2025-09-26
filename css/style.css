@@ -11,6 +11,12 @@ header, footer {
   text-align: center;
 }
 
+header p {
+  font-weight: bold;
+  color: #0a9396;
+  font-size: 1.2rem;
+}
+
 main {
   padding: 2rem;
 }
@@ -32,4 +38,5 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 
