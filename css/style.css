@@ -1,42 +1,112 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
 }
 
-header, footer {
+/* Header */
+header {
   background-color: #005f73;
-  color: white;
-  padding: 1rem;
+  color: #ffffff;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
 header p {
-  font-weight: bold;
-  color: #0a9396;
   font-size: 1.2rem;
+  font-weight: bold;
+  color: #94d2bd;
+  margin-top: 0.5rem;
 }
 
+/* Main Sections */
 main {
-  padding: 2rem;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Section Titles */
+main h2 {
+  font-size: 1.8rem;
+  color: #005f73;
+  border-bottom: 2px solid #0a9396;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Lists */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
 ul li {
-  margin: 0.5rem 0;
+  margin: 0.7rem 0;
+  font-size: 1.1rem;
 }
 
+/* Links */
 a {
-  text-decoration: none;
   color: #0a9396;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* Project Section */
+#projects ul li {
+  margin-bottom: 0.8rem;
+}
+
+/* Certification Section */
+#certifications ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #001219;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Optional: Responsive for smaller screens */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+  }
+}
 
