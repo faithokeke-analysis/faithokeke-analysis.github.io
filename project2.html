@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 2 - AKO Bakery Performance Analysis</title>
+  <title>Project 2 - AVO Bakery Performance Analysis</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -60,108 +60,141 @@
 </head>
 <body>
   <header>
-    <h1>AKO Bakery Sales Performance Analysis</h1>
-    <p><strong>Tool:</strong> Microsoft Excel | <strong>Domain:</strong> Ako Bakery Sales Performance Analysis</p>
+    <h1>AVO Bakery Sales Performance Analysis</h1>
+    <p><strong>Tool:</strong> Microsoft Excel | <strong>Domain:</strong> Retail & Bakery Sales Analytics</p>
   </header>
 
   <main>
+    <!-- 1. Overview -->
+    <section>
+      <h2>Project Overview / Introduction</h2>
+      <p>
+        This project analyzes <strong>AKO Bakery’s performance between February and June 2024</strong> using Microsoft Excel. 
+        The goal was to understand monthly sales trends, identify top-performing sales channels, measure profit fluctuations, 
+        and forecast how price adjustments (₦1,500 and ₦1,800) could impact revenue and profitability.
+      </p>
+      <img src="images2/cover.JPG" alt="Project Cover">
+    </section>
+
+    <!-- 2. Business Background -->
     <section>
       <h2>Business Background</h2>
       <p>
-        GlobalSource Ltd., a mid-sized company managing multiple suppliers across diverse categories,
-        faced challenges with inconsistent supplier performance, delivery delays, and inefficient payment processes.
+        AKO Bakery is a growing bakery that produces and distributes bread through three main channels — retailers, AREPO wholesalers, 
+        and walk-in customers. Between February and June 2024, the bakery experienced fluctuating performance across sales, cost, 
+        and profitability. Leadership needed a data-driven analysis to identify which channels drive sales, where losses occur, 
+        and how pricing adjustments could improve profits.
       </p>
     </section>
 
+    <!-- 3. Business Objectives -->
     <section>
-      <h2>Business Objective</h2>
+      <h2>Business Objectives</h2>
       <ul>
-        <li>Strengthen supplier relationships</li>
-        <li>Enhance operational efficiency</li>
-        <li>Reduce procurement costs</li>
-        <li>Enable data-driven decision-making through analytics</li>
+        <li>Analyze sales performance and its impact on overall profitability.</li>
+        <li>Identify the sales channels generating the highest revenue.</li>
+        <li>Forecast potential revenue and profit if prices are increased to ₦1,500 and ₦1,800.</li>
+        <li>Provide actionable recommendations to enhance sales and efficiency.</li>
       </ul>
     </section>
 
+    <!-- 4. Dataset / Data Dictionary -->
     <section>
-      <h2>Key Challenges</h2>
-      <ul>
-        <li>Supplier performance (reliability & cost-effectiveness)</li>
-        <li>Order efficiency (delays and cancellations)</li>
-        <li>Category optimization (high-demand categories)</li>
-        <li>Payment bottlenecks (slow or inaccurate payments)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Project Goal</h2>
+      <h2>Dataset & Data Dictionary</h2>
       <p>
-        Transform procurement data into actionable insights with Power BI by:
+        The dataset covers sales records from February to June 2024. Each entry includes monthly sales, cost, selling price, 
+        profit margin, and performance across different sales channels.
       </p>
       <ul>
-        <li>Tracking supplier KPIs</li>
-        <li>Monitoring order cycles & costs</li>
-        <li>Streamlining payment analysis</li>
+        <li><strong>Sales Channel:</strong> AREPO, Retailers, and Walk-in customers.</li>
+        <li><strong>Profit Margin:</strong> Portion of sales revenue retained as profit after costs.</li>
+        <li><strong>Sales Growth:</strong> Percentage increase in sales compared to the previous month.</li>
+        <li><strong>SP (Selling Price):</strong> Price per bread loaf for the month.</li>
+        <li><strong>Number of Orders:</strong> Total customer orders per month.</li>
       </ul>
+      <img src="images2/Data Dictionary.PNG" alt="Data Dictionary">
     </section>
 
+    <!-- 5. Monthly Highlights -->
     <section>
-      <h2>Tools & Skills Used</h2>
+      <h2>Performance Highlights (February - June 2024)</h2>
+      <p>📊 The monthly analysis below highlights key patterns in volume, sales, and profit.</p>
+      <img src="images2/kpis.PNG" alt="Key Metrics and Performance Highlights">
+
       <ul>
-        <li>Power BI (Power Query, DAX, interactive dashboards)</li>
-        <li>Data Modeling (relationships between suppliers, categories, orders, payments)</li>
-        <li>Business Analysis (translating business needs into metrics and dashboards)</li>
+        <li><strong>February:</strong> Lowest sales and volume but second most profitable month due to low production cost.</li>
+        <li><strong>March:</strong> Most profitable month after increasing price to ₦1,300; bulk order significantly boosted profit.</li>
+        <li><strong>April:</strong> Sharp decline in all metrics; 48% of sales made below cost of ₦1,234, resulting in losses.</li>
+        <li><strong>May:</strong> Revenue dropped slightly due to the economic downturn, but profit improved.</li>
+        <li><strong>June:</strong> Recovered with an increase in all metrics, ranking second in total revenue and profit.</li>
       </ul>
+
+      <!-- Individual month images -->
+      <img src="images2/february.PNG" alt="February Report">
+      <img src="images2/march.PNG" alt="March Report">
+      <img src="images2/april.PNG" alt="April Report">
+      <img src="images2/may.PNG" alt="May Report">
+      <img src="images2/june.PNG" alt="June Report">
     </section>
 
+    <!-- 6. Sales Channel -->
     <section>
-      <h2>Dashboard Highlights</h2>
-      <ul>
-        <li><strong>Supplier Performance:</strong> On-time delivery rates, cost-effectiveness scorecards</li>
-        <li><strong>Order Cycle Efficiency:</strong> Trends in delays, cancellations, average lead time</li>
-        <li><strong>Payment Analysis:</strong> Paid vs. unpaid orders, average processing time</li>
-        <li><strong>Category Analysis:</strong> High-demand categories for negotiations</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Why This Matters</h2>
+      <h2>Sales Channel Performance</h2>
       <p>
-       Procurement inefficiencies = higher costs. Analytics helps:
+        Retailers were the key driver of growth, contributing 69% of total sales with a 41% average growth rate. 
+        AREPO contributed 24% but showed a consistent month-on-month decline (-2% average). 
+        Walk-in customers represented the smallest share (7%) but displayed a healthy 31% average growth.
       </p>
-      <ul>
-        <li>Negotiate better contracts</li>
-        <li>Improve supplier accountability</li>
-        <li>Ensure smoother cash flow</li>
-      </ul>
+      <img src="images2/sales channel performance.PNG" alt="Sales Channel Performance">
     </section>
 
+    <!-- 7. Predictive Analysis -->
+    <section>
+      <h2>Predictive Analysis</h2>
+      <p>
+        Predictive models were created for three pricing scenarios using ₦1,500 and ₦1,800 as new price points:
+      </p>
+      <ul>
+        <li><strong>Neutral Case:</strong> All other factors remain constant; moderate profit increase.</li>
+        <li><strong>Optimistic Case:</strong> Price increase with stable customer demand; highest projected profit.</li>
+        <li><strong>Pessimistic Case:</strong> Slight decline in volume due to price sensitivity but profit still improved.</li>
+      </ul>
+      <p>
+        Based on analysis, setting the retail price at ₦1,500 and offering retailers a ₦1,450 discount per loaf 
+        would maximize profit without losing market share.
+      </p>
+      <img src="images2/predictive analysis.PNG" alt="Predictive Analysis Scenarios">
+    </section>
+
+    <!-- 8. Recommendations -->
+    <section>
+      <h2>Recommendations</h2>
+      <ul>
+        <li><strong>Expand Retail Network:</strong> Increase number of retailer distributors to drive higher sales.</li>
+        <li><strong>Retailer Discounts:</strong> Offer bulk-buy discounts (e.g., ₦1,450 per loaf at ₦1,500 RRP).</li>
+        <li><strong>Customer Surveys:</strong> Collect customer feedback regularly to track satisfaction and brand loyalty.</li>
+        <li><strong>Strategic Partnerships:</strong> Partner with cafés, hotels, and restaurants for consistent bulk orders.</li>
+        <li><strong>Delivery Platforms:</strong> Collaborate with on-demand apps like Chowdeck and Glovo to reach digital customers.</li>
+      </ul>
+      <img src="images2/recommendations.PNG" alt="Recommendations">
+    </section>
+
+    <!-- 9. Outcome -->
     <section>
       <h2>Outcome</h2>
       <p>
-        This dashboard delivered actionable insights to support strategic procurement decisions,
-        helping GlobalSource Ltd. optimize supplier relationships, improve order efficiency, and streamline payments.
+        This Excel analysis provided AVO Bakery with clear insights into sales trends, profitability patterns, 
+        and performance drivers. It enabled data-backed decisions on pricing, retail partnerships, and 
+        cost management, resulting in improved operational and financial efficiency.
       </p>
     </section>
 
-    <section>
-      <h2>Preview</h2>
-      <p>📊 Report Screenshots:</p>
-      <img src="images2/Cover.JPG" alt="Cover">
-      <img src="images2/KPIs.PNG" alt="KPIs">
-      <img src="images2/February.PNG" alt="February">
-      <img src="images2/March.PNG" alt="March">
-      <img src="images2/April.PNG" alt="April">
-      <img src="images2/May.PNG" alt="May">
-      <img src="images2/June.PNG" alt="June">
-      <img src="images2/Sales Channel performance.PNG" alt="Sales Channel Performance">
-    </section>
-
+    <!-- 10. Access Links -->
     <section>
       <h2>Access the Project</h2>
       <ul>
-        <li>📂 <a href="https://your-drive-link.com" target="_blank">Download Excel File</a></li>
-        <li>🌐 <a href="https://app.powerbi.com/groups/me/reports/5313ee60-beea-4dde-b3d7-7ec47faa0535?pbi_source=PowerPoint">View Interactive Dashboard</a></li>
+        <li>📂 <a href="assets/project2/AKO_Bakery_Analysis.xlsx" target="_blank">Download Excel File</a></li>
+        <li>🌐 <a href="https://faithokeke-analysis.github.io/project2.html" target="_blank">View Project on GitHub</a></li>
       </ul>
     </section>
 
@@ -171,4 +204,3 @@
   </main>
 </body>
 </html>
-
