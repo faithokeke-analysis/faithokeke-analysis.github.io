@@ -139,6 +139,7 @@ ON customer.customer_id = sales_order.customer_id
 GROUP BY customer_name
 ORDER BY total_sales DESC;</code></pre>
       <p><em>Insight:</em> Identified high-value customers contributing the most to total revenue.</p>
+      <img src="project3-sql/screenshots/query1_result.png" alt="Regional Sales Query Result">
 
       <h3>3️⃣ Orders by Segment in 2017</h3>
       <pre><code>SELECT segment, COUNT(order_date) AS total_orders
