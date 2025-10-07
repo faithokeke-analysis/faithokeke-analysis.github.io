@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 3 - Retail Sales Analysis (SQL)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #004080;
+    }
+    ul {
+      margin: 10px 0;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    img {
+      display: block;
+      margin: 15px auto;
+      max-width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 3px 5px;
+      border-radius: 4px;
+      color: #c7254e;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 15px;
+      background: #004080;
+      color: white;
+    }
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Retail Sales Performance Analysis Using SQL</h1>
+    <p><strong>Tool:</strong> PostgreSQL | <strong>Domain:</strong> Retail Sales & Customer Insights</p>
+  </header>
+
+  <main>
+    <!-- Overview -->
+    <section>
+      <h2>Project Overview</h2>
+      <p>
+        This project explores how SQL can be used to analyze retail performance data using 
+        <strong>PostgreSQL</strong>. It covers data modeling, relational joins, aggregation, and subquery techniques 
+        to uncover key insights about customers, regions, and product sales. The dataset contains 
+        <code>customer</code>, <code>product</code>, and <code>sales_order</code> tables.
+      </p>
+      <img src="project3-sql/screenshots/sql_overview.png" alt="SQL Overview Screenshot">
+    </section>
+
+    <!-- Database Schema -->
+    <section>
+      <h2>Database Schema</h2>
+      <p>The relational model consists of three core tables:</p>
+      <ul>
+        <li><strong>customer</strong> – Customer demographics and segmentation info.</li>
+        <li><strong>product</strong> – Product categories and subcategories.</li>
+        <li><strong>sales_order</strong> – Transactional data with sales, discount, and dates.</li>
+      </ul>
+      <img src="project3-sql/screenshots/schema_diagram.png" alt="Database Schema Diagram">
+    </section>
+
+    <!-- Business Objectives -->
+    <section>
+      <h2>Business Objectives</h2>
+      <ul>
+        <li>Understand sales distribution by region and customer segment.</li>
+        <li>Identify top-performing customers and regions by sales volume.</li>
+        <li>Determine customer purchase behavior across time and segments.</li>
+        <li>Use subqueries to compare customer demographics against overall averages.</li>
+      </ul>
+    </section>
+
+    <!-- SQL Techniques -->
+    <section>
+      <h2>SQL Techniques Used</h2>
+      <ul>
+        <li><strong>Joins:</strong> INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN to merge datasets.</li>
+        <li><strong>Aggregation:</strong> SUM, COUNT, MAX for performance metrics.</li>
+        <li><strong>Filtering:</strong> WHERE, BETWEEN, and GROUP BY with HAVING for advanced queries.</li>
+        <li><strong>Subqueries:</strong> Nested queries to compare customer ages and regional performance.</li>
+      </ul>
+    </section>
+
+    <!-- Key Queries -->
+    <section>
+      <h2>Key SQL Queries & Insights</h2>
+      <p>Below are some of the important queries and their insights.</p>
+
+      <h3>1️⃣ Regional Sales Performance</h3>
+      <pre><code>SELECT region, SUM(sales) AS total_sales
+FROM customer
+INNER JOIN sales_order
+ON customer.customer_id = sales_order.customer_id
+GROUP BY region
+ORDER BY total_sales DESC;</code></pre>
+      <p><em>Insight:</em> Revealed the top-performing regions based on total sales volume.</p>
+      <img src="project3-sql/screenshots/query1_result.png" alt="Regional Sales Query Result">
+
+      <h3>2️⃣ Top Customers by Total Sales</h3>
+      <pre><code>SELECT customer_name, SUM(sales) AS total_sales
+FROM customer
+INNER JOIN sales_order
+ON customer.customer_id = sales_order.customer_id
+GROUP BY customer_name
+ORDER BY total_sales DESC;</code></pre>
+      <p><em>Insight:</em> Identified high-value customers contributing the most to total revenue.</p>
+
+      <h3>3️⃣ Orders by Segment in 2017</h3>
+      <pre><code>SELECT segment, COUNT(order_date) AS total_orders
+FROM customer
+INNER JOIN sales_order
+ON customer.customer_id = sales_order.customer_id
+WHERE order_date BETWEEN '2017-01-01' AND '2017-12-31'
+GROUP BY segment
+ORDER BY total_orders DESC;</code></pre>
+      <p><em>Insight:</em> Helped determine which segments were most active within the year.</p>
+
+      <h3>4️⃣ Customers Older Than Average</h3>
+      <pre><code>SELECT customer_name, age
+FROM customer
+WHERE age > (SELECT AVG(age) FROM customer);</code></pre>
+      <p><em>Insight:</em> Compared customers’ age distribution against the overall average using a subquery.</p>
+      <img src="project3-sql/screenshots/query_subquery_result.png" alt="Subquery Example Result">
+    </section>
+
+    <!-- Business Impact -->
+    <section>
+      <h2>Business Impact</h2>
+      <ul>
+        <li>Provided insights into regional and segment-level sales performance.</li>
+        <li>Enabled data-driven identification of key customer groups for marketing focus.</li>
+        <li>Demonstrated the use of SQL joins and subqueries for relational data analysis.</li>
+      </ul>
+    </section>
+
+    <!-- Outcome -->
+    <section>
+      <h2>Outcome</h2>
+      <p>
+        The project demonstrated practical SQL skills for business analytics — from data extraction to 
+        insight generation. It formed a foundation for further visualization in Power BI or Excel dashboards, 
+        showing that structured SQL queries can drive meaningful business insights.
+      </p>
+    </section>
+
+    <!-- Access Links -->
+    <section>
+      <h2>Access the Project</h2>
+      <ul>
+        <li>📂 <a href="project3-sql/SQL_CLASS_4_JOIN.sql" target="_blank">Download SQL File</a></li>
+        <li>🧠 <a href="https://dbfiddle.uk/" target="_blank">Run on DB Fiddle (PostgreSQL)</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p><a href="index.html">⬅ Back to Portfolio</a></p>
+    </footer>
+  </main>
+</body>
+</html>
