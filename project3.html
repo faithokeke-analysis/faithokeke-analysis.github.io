@@ -129,7 +129,7 @@ ON customer.customer_id = sales_order.customer_id
 GROUP BY region
 ORDER BY total_sales DESC;</code></pre>
       <p><em>Insight:</em> Revealed the top-performing regions based on total sales volume.</p>
-      <img src="project3-sql/screenshots/query1_result.png" alt="Regional Sales Query Result">
+      <img src="images3/query1_result.png" alt="Regional Sales Query Result">
 
       <h3>2️⃣ Top Customers by Total Sales</h3>
       <pre><code>SELECT customer_name, SUM(sales) AS total_sales
@@ -139,7 +139,7 @@ ON customer.customer_id = sales_order.customer_id
 GROUP BY customer_name
 ORDER BY total_sales DESC;</code></pre>
       <p><em>Insight:</em> Identified high-value customers contributing the most to total revenue.</p>
-      <img src="project3-sql/screenshots/query1_result.png" alt="Regional Sales Query Result">
+      <img src="images3/query2_result.png" alt="Regional Sales Query Result">
 
       <h3>3️⃣ Orders by Segment in 2017</h3>
       <pre><code>SELECT segment, COUNT(order_date) AS total_orders
@@ -156,7 +156,7 @@ ORDER BY total_orders DESC;</code></pre>
 FROM customer
 WHERE age > (SELECT AVG(age) FROM customer);</code></pre>
       <p><em>Insight:</em> Compared customers’ age distribution against the overall average using a subquery.</p>
-      <img src="project3-sql/screenshots/query_subquery_result.png" alt="Subquery Example Result">
+      <img src="images3/query_subquery_result.png" alt="Subquery Example Result">
     </section>
 
     <!-- Business Impact -->
